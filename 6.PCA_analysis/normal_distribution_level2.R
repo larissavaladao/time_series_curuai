@@ -1477,7 +1477,7 @@ ggscatter(data_HW_F, x = 'mean_SPM', y = 'anthropic_km2', add = 'reg.line', conf
 #matriz de corelacao############################################################
 #LW
 data_LW<-select(data_LW, mean_SPM  , area_km2  ,  mean_precipitation,
-                    mean_discharge,anthropic_km2,mean_u__wind,mean_v__wind,max_SPM,min_SPM)
+                mean_discharge,anthropic_km2,mean_u__wind,mean_v__wind,max_SPM,min_SPM)
 correlation_LW_sp <- cor(data_LW, method = 'spearman')
 corrplot::corrplot.mixed(correlation_LW_sp, upper = 'ellipse', lower = 'number', las = 1)
 correlation_LW_pea <- cor(data_LW, method = 'pearson')
@@ -1493,7 +1493,7 @@ corrplot::corrplot.mixed(correlation_HW_pea, upper = 'ellipse', lower = 'number'
 
 #R
 data_R<-select(data_R, mean_SPM  , area_km2  ,  mean_precipitation,
-                mean_discharge,anthropic_km2,mean_u__wind,mean_v__wind,max_SPM,min_SPM)
+               mean_discharge,anthropic_km2,mean_u__wind,mean_v__wind,max_SPM,min_SPM)
 correlation_R_sp <- cor(data_R, method = 'spearman')
 corrplot::corrplot.mixed(correlation_R_sp, upper = 'ellipse', lower = 'number', las = 1)
 correlation_R_pea <- cor(data_R, method = 'pearson')
@@ -1501,7 +1501,7 @@ corrplot::corrplot.mixed(correlation_R_pea, upper = 'ellipse', lower = 'number',
 
 #F
 data_F<-select(data_F, mean_SPM  , area_km2  ,  mean_precipitation,
-                mean_discharge,anthropic_km2,mean_u__wind,mean_v__wind,max_SPM,min_SPM)
+               mean_discharge,anthropic_km2,mean_u__wind,mean_v__wind,max_SPM,min_SPM)
 correlation_F_sp <- cor(data_F, method = 'spearman')
 corrplot::corrplot.mixed(correlation_F_sp, upper = 'ellipse', lower = 'number', las = 1)
 correlation_F_pea <- cor(data_F, method = 'pearson')
@@ -1509,7 +1509,7 @@ corrplot::corrplot.mixed(correlation_F_pea, upper = 'ellipse', lower = 'number',
 
 #transition
 data_transition<-select(data_transition, mean_SPM  , area_km2  ,  mean_precipitation,
-                mean_discharge,anthropic_km2,mean_u__wind,mean_v__wind,max_SPM,min_SPM)
+                        mean_discharge,anthropic_km2,mean_u__wind,mean_v__wind,max_SPM,min_SPM)
 correlation_transition_sp <- cor(data_transition, method = 'spearman')
 corrplot::corrplot.mixed(correlation_transition_sp, upper = 'ellipse', lower = 'number', las = 1)
 correlation_transition_pea <- cor(data_transition, method = 'pearson')
@@ -1517,7 +1517,7 @@ corrplot::corrplot.mixed(correlation_transition_pea, upper = 'ellipse', lower = 
 
 #LW_R
 data_LW_R<-select(data_LW_R, mean_SPM  , area_km2  ,  mean_precipitation,
-                mean_discharge,anthropic_km2,mean_u__wind,mean_v__wind,max_SPM,min_SPM)
+                  mean_discharge,anthropic_km2,mean_u__wind,mean_v__wind,max_SPM,min_SPM)
 correlation_LW_R_sp <- cor(data_LW_R, method = 'spearman')
 corrplot::corrplot.mixed(correlation_LW_R_sp, upper = 'ellipse', lower = 'number', las = 1)
 correlation_LW_R_pea <- cor(data_LW_R, method = 'pearson')
@@ -1525,7 +1525,7 @@ corrplot::corrplot.mixed(correlation_LW_R_pea, upper = 'ellipse', lower = 'numbe
 
 #HW_F
 data_HW_F<-select(data_HW_F, mean_SPM  , area_km2  ,  mean_precipitation,
-                mean_discharge,anthropic_km2,mean_u__wind,mean_v__wind,max_SPM,min_SPM)
+                  mean_discharge,anthropic_km2,mean_u__wind,mean_v__wind,max_SPM,min_SPM)
 correlation_HW_F_sp <- cor(data_HW_F, method = 'spearman')
 corrplot::corrplot.mixed(correlation_HW_F_sp, upper = 'ellipse', lower = 'number', las = 1)
 correlation_HW_F_pea <- cor(data_HW_F, method = 'pearson')

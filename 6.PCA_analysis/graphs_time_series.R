@@ -1,6 +1,9 @@
 #definir diret?rio de trabalho e importar dados ####
 setwd("C:/Users/l_v_v/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df")
+setwd("C:/Users/LarissaVieiraValadão/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df")
+
 library(readr)
+library(dplyr)
 
 dados <- as.data.frame(read.csv("filled_data_cota_lulc.csv"))
 dados <- select(dados,-X,-class_name,-stdDev_SPM)
@@ -12,7 +15,6 @@ head(dados)
 library(ggplot2)
 library(grid)
 library(gtable)
-library(dplyr)
 library(ggpmisc)
 library("cowplot")
 
