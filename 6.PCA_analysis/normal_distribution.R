@@ -8,7 +8,8 @@ setwd("C:/Users/LarissaVieiraValadão/Documents/GitHub/time_series_curuai/datase
 
 library(readr)
 library(dplyr)
-data <- as.data.frame(read.csv("C:/Users/l_v_v/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df/df_merged_cota_lulc.csv"))
+#data <- as.data.frame(read.csv("C:/Users/l_v_v/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df/df_merged_cota_lulc.csv"))
+data <- as.data.frame(read.csv("C:/Users/LarissaVieiraValadão/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df/df_merged_cota_lulc.csv"))
 head(data)
 summary(data)
 
