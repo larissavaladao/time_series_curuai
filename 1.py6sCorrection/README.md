@@ -13,12 +13,12 @@ gcloud auth login
 
 git clone https://github.com/samsammurphy/gee-atmcorr-S2
 
-git clone https://github.com/larissavaladao/py6s_harmonize_sample.git
+git clone https://github.com/larissavaladao/time_series_curuai.git
 
-cd py6s_harmonize_sample/
+cd time_series_curuai/
 
-mv 1.hamonization_py6sCorrection ../gee-atmcorr-S2
+mv 1.py6sCorrection ../gee-atmcorr-S2
 
-cd ../gee-atmcorr-S2/1.hamonization_py6sCorrection
+cd ../gee-atmcorr-S2/1.py6sCorrection
 
 jupyter-notebook py6s_correction.ipynb --ip='*' --port=8888 --allow-root
