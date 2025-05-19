@@ -27,6 +27,7 @@ library("cowplot")
 dados$water_period <- as.factor(dados$water_period)
 dados$time_start <- as.Date(dados$time_start)
 dados$time_finish <- as.Date(dados$time_finish)
+
 # Create a new column based on condition
 dados <- dados %>% mutate(agg_water_period = ifelse(water_period == 'LW'|water_period == 'R', "LW_R", "HW_F"))
 dados$agg_water_period <- as.factor(dados$agg_water_period)

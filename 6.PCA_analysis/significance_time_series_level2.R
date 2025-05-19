@@ -3,14 +3,12 @@
 #libraries######################
 library(funtimes)
 library(dplyr)
-library(Kendall)
-library(tseries)
 #definir diret?rio de trabalho ##############################
 setwd("C:/Users/l_v_v/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df")
 setwd("C:/Users/LarissaVieiraValadão/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df")
 
 #importar dados ##############################
-dados <- as.data.frame(read.csv("filled_data_cota_lulc.csv"))
+dados <- as.data.frame(read.csv("filled_data_cota_lulcN2.csv"))
 dados$water_period <- as.factor(dados$water_period)
 dados$time_start <- as.Date(dados$time_start)
 dados$time_finish <- as.Date(dados$time_finish)
@@ -135,3 +133,4 @@ apply(selecao, 2, function(x) notrend_test(x)$p.value)
 apply(selecao, 2, function(x) notrend_test(x, test = "MK")$p.value)
 apply(selecao, 2, function(x) notrend_test(x,test = "WAVK", 
                                            factor.length = "adaptive.selection")$p.value)
+
