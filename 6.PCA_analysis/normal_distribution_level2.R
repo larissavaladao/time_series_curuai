@@ -4,12 +4,12 @@
 
 #definir diret?rio de trabalho e importar dados ####
 setwd("C:/Users/l_v_v/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df")
-# setwd("C:/Users/LarissaVieiraValadão/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df")
+setwd("C:/Users/LarissaVieiraValadão/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df")
 
 library(readr)
 library(dplyr)
 data <- as.data.frame(read.csv("C:/Users/l_v_v/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df/df_merged_cota_lulcN2.csv"))
-# data <- as.data.frame(read.csv("C:/Users/LarissaVieiraValadão/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df/df_merged_cota_lulcN2.csv"))
+data <- as.data.frame(read.csv("C:/Users/LarissaVieiraValadão/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df/df_merged_cota_lulcN2.csv"))
 head(data)
 summary(data)
 
@@ -18,20 +18,34 @@ summary(data)
 #5 datasets
 library(mice)
 library(dplyr)
-
+library(tidyr)
 
 #imputar dados faltantes faltantes
-selecao <- select(data, mean_u__wind  , mean_v__wind  , anthropic_km2, area_km2,mean_SPM,mean_precipitation)
+selecao <- select(data, mean_u__wind  , mean_v__wind  , anthropic_km2, area_km2,mean_SPM,mean_precipitation,year)
 dados_imp <- mice(selecao, m = 5, maxit = 100, method = 'pmm', seed = 500)
-dados_comp <- complete(dados_imp, 3)#numero do dataset cujas imputa??es vc quer usar
+dados_comp <- complete(dados_imp, 5)#numero do dataset cujas imputa??es vc quer usar
 dados_comp
 
 
-selecao <- select(data, -X,-mean_u__wind,-mean_v__wind,-anthropic_km2)
+selecao <- select(data, -X,-mean_u__wind,-mean_v__wind)
 
 selecao$mean_u__wind <- dados_comp$mean_u__wind
 selecao$mean_v__wind <- dados_comp$mean_v__wind
-selecao$anthropic_km2 <- dados_comp$anthropic_km2
+
+
+dados_temp1 <- selecao[!duplicated(selecao$year), ]
+dados_temp1
+dados_temp <- dados_temp1 %>% drop_na()
+## fazer regressão lm para completar dados de area antropizada
+anthropicLm = lm(anthropic_km2~year, data = dados_temp) #Create the linear regression
+summary(anthropicLm)
+a <- summary(anthropicLm)$coefficients[1,1] #Review the results
+
+b <- summary(anthropicLm)$coefficients[2,1] #Review the results
+
+selecao <- selecao %>% dplyr::mutate(anthropic_km2 = replace_na(anthropic_km2, a+(b*2024)))
+tail(selecao)
+
 
 write.csv(selecao, file = "filled_data_cota_lulcN2.csv")
 
