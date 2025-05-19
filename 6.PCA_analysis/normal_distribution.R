@@ -4,12 +4,12 @@
 
 #definir diret?rio de trabalho e importar dados ####
 setwd("C:/Users/l_v_v/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df")
-setwd("C:/Users/LarissaVieiraValadão/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df")
+# setwd("C:/Users/LarissaVieiraValadão/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df")
 
 library(readr)
 library(dplyr)
-#data <- as.data.frame(read.csv("C:/Users/l_v_v/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df/df_merged_cota_lulc.csv"))
-data <- as.data.frame(read.csv("C:/Users/LarissaVieiraValadão/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df/df_merged_cota_lulc.csv"))
+data <- as.data.frame(read.csv("C:/Users/l_v_v/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df/df_merged_cota_lulc.csv"))
+# data <- as.data.frame(read.csv("C:/Users/LarissaVieiraValadão/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df/df_merged_cota_lulc.csv"))
 head(data)
 summary(data)
 
@@ -23,7 +23,7 @@ library(dplyr)
 #imputar dados faltantes faltantes
 selecao <- select(data, mean_u__wind  , mean_v__wind  , anthropic_km2, area_km2,mean_SPM,mean_precipitation)
 dados_imp <- mice(selecao, m = 5, maxit = 100, method = 'pmm', seed = 500)
-dados_comp <- complete(dados_imp, 2)#numero do dataset cujas imputa??es vc quer usar
+dados_comp <- complete(dados_imp, 5)#numero do dataset cujas imputa??es vc quer usar
 dados_comp
 
 
@@ -267,31 +267,31 @@ data_select$water_period <- as.factor(data_select$water_period)
 
 # checking which values are from the period
 data_LW <- filter(data_select,water_period=='LW') 
-data_LW
+# data_LW
 summary(data_LW)
 
 data_HW<- filter(data_select,water_period=='HW') 
-data_HW
+# data_HW
 summary(data_HW)
 
 data_R<- filter(data_select,water_period=='R') 
-data_R
+# data_R
 summary(data_R)
 
 data_F<- filter(data_select,water_period=='F') 
-data_F
+# data_F
 summary(data_F)
 
 data_transition<- filter(data_select, water_period=='F' | water_period=='R') 
-data_transition
+# data_transition
 summary(data_transition)
 
 data_LW_R <- filter(data_select,water_period=='LW' | water_period=='R') 
-data_LW_R
+# data_LW_R
 summary(data_LW_R)
 
 data_HW_F<- filter(data_select,water_period=='HW'| water_period=='F') 
-data_HW_F
+# data_HW_F
 summary(data_HW_F)
 
 

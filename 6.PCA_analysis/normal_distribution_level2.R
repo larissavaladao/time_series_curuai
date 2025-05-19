@@ -3,13 +3,13 @@
 #definir diretório de trabalho e importar dados ##################
 
 #definir diret?rio de trabalho e importar dados ####
-#setwd("C:/Users/l_v_v/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df")
-setwd("C:/Users/LarissaVieiraValadão/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df")
+setwd("C:/Users/l_v_v/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df")
+# setwd("C:/Users/LarissaVieiraValadão/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df")
 
 library(readr)
 library(dplyr)
-#data <- as.data.frame(read.csv("C:/Users/l_v_v/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df/df_merged_cota_lulcN2.csv"))
-data <- as.data.frame(read.csv("C:/Users/LarissaVieiraValadão/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df/df_merged_cota_lulcN2.csv"))
+data <- as.data.frame(read.csv("C:/Users/l_v_v/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df/df_merged_cota_lulcN2.csv"))
+# data <- as.data.frame(read.csv("C:/Users/LarissaVieiraValadão/Documents/GitHub/time_series_curuai/datasets/Parameters Time series/merged_df/df_merged_cota_lulcN2.csv"))
 head(data)
 summary(data)
 
@@ -199,31 +199,31 @@ data_select$water_period <- as.factor(data_select$water_period)
 
 # checking which values are from the period
 data_LW <- filter(data_select,water_period=='LW') 
-data_LW
+# data_LW
 summary(data_LW)
 
 data_HW<- filter(data_select,water_period=='HW') 
-data_HW
+# data_HW
 summary(data_HW)
 
 data_R<- filter(data_select,water_period=='R') 
-data_R
+# data_R
 summary(data_R)
 
 data_F<- filter(data_select,water_period=='F') 
-data_F
+# data_F
 summary(data_F)
 
 data_transition<- filter(data_select, water_period=='F' | water_period=='R') 
-data_transition
+# data_transition
 summary(data_transition)
 
 data_LW_R <- filter(data_select,water_period=='LW' | water_period=='R') 
-data_LW_R
+# data_LW_R
 summary(data_LW_R)
 
 data_HW_F<- filter(data_select,water_period=='HW'| water_period=='F') 
-data_HW_F
+# data_HW_F
 summary(data_HW_F)
 
 
@@ -529,7 +529,7 @@ library(psych)
 ##mean SPM#############
 #LW
 ggscatter(data_LW, x = 'mean_SPM', y = 'area_km2', add = 'reg.line', conf.int = TRUE,
-          cor.coef = TRUE, cor.method = 'pearson', xlab = 'mean_SPM',
+          cor.coef = TRUE, cor.method = 'spearman', xlab = 'mean_SPM',
           ylab = 'area_km2') #cov linear
 
 ggscatter(data_LW, x = 'mean_SPM', y = 'mean_precipitation', add = 'reg.line', conf.int = TRUE,
@@ -537,19 +537,19 @@ ggscatter(data_LW, x = 'mean_SPM', y = 'mean_precipitation', add = 'reg.line', c
           ylab = 'mean_precipitation') #cov linear
 
 ggscatter(data_LW, x = 'mean_SPM', y = 'mean_discharge', add = 'reg.line', conf.int = TRUE,
-          cor.coef = TRUE, cor.method = 'pearson', xlab = 'mean_SPM', 
+          cor.coef = TRUE, cor.method = 'spearman', xlab = 'mean_SPM', 
           ylab = 'mean_discharge') #cov linear
 
 ggscatter(data_LW, x = 'mean_SPM', y = 'mean_u__wind', add = 'reg.line', conf.int = TRUE,
-          cor.coef = TRUE, cor.method = 'pearson', xlab = 'mean_SPM', 
+          cor.coef = TRUE, cor.method = 'spearman', xlab = 'mean_SPM', 
           ylab = 'mean_u__wind') #cov linear
 
 ggscatter(data_LW, x = 'mean_SPM', y = 'mean_v__wind', add = 'reg.line', conf.int = TRUE,
-          cor.coef = TRUE, cor.method = 'pearson', xlab = 'mean_SPM', 
+          cor.coef = TRUE, cor.method = 'spearman', xlab = 'mean_SPM', 
           ylab = 'mean_v__wind') #cov linear
 
 ggscatter(data_LW, x = 'mean_SPM', y = 'anthropic_km2', add = 'reg.line', conf.int = TRUE,
-          cor.coef = TRUE, cor.method = 'pearson', xlab = 'mean_SPM', 
+          cor.coef = TRUE, cor.method = 'spearman', xlab = 'mean_SPM', 
           ylab = 'anthropic_km2') #cov linear
 
 #HW
@@ -566,7 +566,7 @@ ggscatter(data_HW, x = 'mean_SPM', y = 'mean_discharge', add = 'reg.line', conf.
           ylab = 'mean_discharge') #cov linear
 
 ggscatter(data_HW, x = 'mean_SPM', y = 'mean_u__wind', add = 'reg.line', conf.int = TRUE,
-          cor.coef = TRUE, cor.method = 'pearson', xlab = 'mean_SPM', 
+          cor.coef = TRUE, cor.method = 'spearman', xlab = 'mean_SPM', 
           ylab = 'mean_u__wind') #cov linear
 
 ggscatter(data_HW, x = 'mean_SPM', y = 'mean_v__wind', add = 'reg.line', conf.int = TRUE,
@@ -579,7 +579,7 @@ ggscatter(data_HW, x = 'mean_SPM', y = 'anthropic_km2', add = 'reg.line', conf.i
 
 #R
 ggscatter(data_R, x = 'mean_SPM', y = 'area_km2', add = 'reg.line', conf.int = TRUE,
-          cor.coef = TRUE, cor.method = 'pearson', xlab = 'mean_SPM',
+          cor.coef = TRUE, cor.method = 'spearman', xlab = 'mean_SPM',
           ylab = 'area_km2') #cov linear
 
 ggscatter(data_R, x = 'mean_SPM', y = 'mean_precipitation', add = 'reg.line', conf.int = TRUE,
@@ -604,7 +604,7 @@ ggscatter(data_R, x = 'mean_SPM', y = 'anthropic_km2', add = 'reg.line', conf.in
 
 #F
 ggscatter(data_F, x = 'mean_SPM', y = 'area_km2', add = 'reg.line', conf.int = TRUE,
-          cor.coef = TRUE, cor.method = 'pearson', xlab = 'mean_SPM',
+          cor.coef = TRUE, cor.method = 'spearman', xlab = 'mean_SPM',
           ylab = 'area_km2') #cov linear
 
 ggscatter(data_F, x = 'mean_SPM', y = 'mean_precipitation', add = 'reg.line', conf.int = TRUE,
