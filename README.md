@@ -1,1 +1,1 @@
-# Repositorio mostra aimplementação de todos os códigos do artigo
+# Repositorio mostra a implementação de todos os códigos do artigo
