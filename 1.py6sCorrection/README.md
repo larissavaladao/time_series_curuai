@@ -74,3 +74,24 @@ Access the notebook through your browser at `http://localhost:8888`
 
 - The Docker container must be running in the background during Jupyter notebook execution
 - Ensure port 8888 is available on your system
+
+
+# Results of the Landsat TOA images are available at:
+
+- Landsat 5: 
+    - projects/ee-curuai2/assets/Py6S/LD5/Landsat5
+        - 1047 images
+        - Start date: 1985-07-02
+        - End date: 2011-10-29
+- Landsat 7
+    - projects/ee-curuai2/assets/Py6S/LD5/Landsat5
+    - projects/ee-curuai/assets/Py6S/LD7/Landsat7
+        - 1399 images
+        - Starte date: 1999-07-16
+        - End date: 2024-01-16
+- Landsat 8 and 9
+    - projects/ee-curuai2/assets/Py6S/LD9/Landsat9
+    - projects/ee-curuai/assets/Py6S/LD8/Landsat8
+        - 1081 images
+        - Start date: 2013-05-11
+        - End date: 2025-12-15
