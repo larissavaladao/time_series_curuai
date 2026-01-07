@@ -115,79 +115,10 @@ for features in FEATURE_GROUPS['single_band'].values():
         model_name=f"OLS - {features[0]}"
     )
 
-# 3. Multi-feature Models
-for model_name, model in MODEL_CONFIG.items():
-    X = df_clean[FEATURE_GROUPS['multi_band']['all_bands']]
-    _, _, metrics, cv_metrics = train_and_evaluate_model(
-        model=model['model'],
-        X=X, y=y,
-        model_name=f"{model['description']} - All Bands",
-        df_data=df_clean,
-        title=f"TSS vs All Bands - {model['description']}"
-    )
 
-# 4. Period-based Analysis
-results = batch_model_evaluation(
-    df_list=df_periods_list,
-    target_col='TSS',
-    feature_cols=FEATURE_GROUPS['multi_band']['all_bands'],
-    model=get_model('polynomial'),
-    model_name="Polynomial by Water Period",
-    periods=list(water_periods)
-)
-
-# 5. Results Compilation
+# 3. Results Compilation
 compile_results_summary(results)
 ```
-
----
-
-## Performance Optimization
-
-### 1. Memory Management
-```python
-# For large datasets, use chunking
-def train_model_chunked(model, X, y, chunk_size=1000):
-    """Train model on chunks to reduce memory usage."""
-    n_chunks = len(y) // chunk_size
-    for i in range(n_chunks):
-        start = i * chunk_size
-        end = (i + 1) * chunk_size
-        model.partial_fit(X[start:end], y[start:end])
-    return model
-```
-
-### 2. Computation Speed
-```python
-# Use faster metrics calculation
-def quick_metrics(y_true, y_pred):
-    """Fast metric calculation for quick comparisons."""
-    from sklearn.metrics import r2_score, mean_absolute_error
-    return {
-        'r2': r2_score(y_true, y_pred),
-        'mae': mean_absolute_error(y_true, y_pred)
-    }
-```
-
-### 3. Batch Processing
-```python
-# Progress tracking for long operations
-from tqdm import tqdm
-
-def batch_evaluation_with_progress(df_list, model, features, periods):
-    """Evaluate with progress bar."""
-    results = {}
-    for df, period in tqdm(zip(df_list, periods), total=len(df_list)):
-        X = df[features]
-        y = df['TSS']
-        model_fit, y_pred, metrics, cv_metrics = train_and_evaluate_model(
-            model, X, y, f"Period: {period}"
-        )
-        results[period] = {'metrics': metrics, 'cv_metrics': cv_metrics}
-    return results
-```
-
----
 
 ## Results Compilation & Comparison
 
