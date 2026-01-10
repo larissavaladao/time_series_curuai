@@ -1,0 +1,13 @@
+,Model,Group,Feature,Params,r2,mae,mse,mape,exp_var
+0,KRR,multi_band,nir_red,"{'alpha': 0.001, 'degree': 2, 'gamma': 100.0, 'kernel': 'poly'}",0.7880707580726353,20.06984573623724,1074.1533056092487,0.4133265441447896,0.7880707580727079
+1,KRR,multi_band,nir_red_green,"{'alpha': 1.5, 'degree': 2, 'gamma': 100.0, 'kernel': 'laplacian'}",0.8103549824689729,16.427373419405182,961.2067717540093,0.3078989825411599,0.8199018834514201
+2,KRR,multi_band,all_bands,"{'alpha': 1.5, 'degree': 2, 'gamma': 100.0, 'kernel': 'laplacian'}",0.7956205837935442,15.87960413817067,1035.8873722197097,0.2593858169449567,0.8124538156845992
+3,KRR,multi_band,location,"{'alpha': 1.5, 'degree': 2, 'gamma': 100.0, 'kernel': 'chi2'}",0.7317652006432984,20.088437564862158,1359.5353514602994,0.3352207475125628,0.753315667841395
+4,KRR,multi_band,period,"{'alpha': 0.001, 'degree': 2, 'gamma': 10.0, 'kernel': 'rbf'}",0.8042774527710748,16.946829663484806,992.0104426187079,0.2871409428893498,0.8042774648589149
+5,KRR,multi_band,period_location,"{'alpha': 0.1, 'degree': 2, 'gamma': 100.0, 'kernel': 'chi2'}",0.9262308400075407,9.287855628915201,373.8954867071893,0.13878323963014025,0.9267141061621237
+6,RF,multi_band,nir_red,"{'criterion': 'absolute_error', 'max_depth': 5, 'max_features': 'sqrt', 'n_estimators': 300, 'oob_score': False, 'warm_start': True}",0.8972268355149218,14.33605026585992,520.900907093348,0.32140511135788413,0.8992282227782175
+7,RF,multi_band,nir_red_green,"{'criterion': 'absolute_error', 'max_depth': 5, 'max_features': 'sqrt', 'n_estimators': 100, 'oob_score': False, 'warm_start': True}",0.8886117170930709,14.394853111739746,564.566225984159,0.2979152222482249,0.8904631984995978
+8,RF,multi_band,all_bands,"{'criterion': 'absolute_error', 'max_depth': 5, 'max_features': 'sqrt', 'n_estimators': 300, 'oob_score': False, 'warm_start': True}",0.9152077474442166,12.804609219314788,429.76550826367395,0.2885300636387399,0.91628995286627
+9,RF,multi_band,location,"{'criterion': 'absolute_error', 'max_depth': 5, 'max_features': 'sqrt', 'n_estimators': 300, 'oob_score': False, 'warm_start': True}",0.9056505498509483,13.233800695426682,478.20571072845877,0.3005869144874474,0.9071215902935372
+10,RF,multi_band,period,"{'criterion': 'absolute_error', 'max_depth': 10, 'max_features': 'sqrt', 'n_estimators': 300, 'oob_score': False, 'warm_start': True}",0.9583957761691622,7.757818437974753,210.86903415866541,0.143204832635682,0.9584678407357727
+11,RF,multi_band,period_location,"{'criterion': 'squared_error', 'max_depth': None, 'max_features': 'sqrt', 'n_estimators': 300, 'oob_score': False, 'warm_start': True}",0.9601895767833468,7.305203386767248,201.77724087045704,0.13169003308365335,0.9602393182579655

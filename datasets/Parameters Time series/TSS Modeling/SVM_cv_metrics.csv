@@ -1,0 +1,4 @@
+,Model,Group,Feature,Params,r2,mae,mse,mape,exp_var
+0,SVM,multi_band,nir_red,"{'C': 10.0, 'coef0': 1, 'degree': 3, 'gamma': 'scale', 'kernel': 'poly'}",0.6591984221272273,20.779689509124164,1301.3910292263595,0.3755009367595953,0.6743045841977271
+1,SVM,multi_band,nir_red_green,"{'C': 10.0, 'coef0': 1, 'degree': 3, 'gamma': 'scale', 'kernel': 'poly'}",0.6380400138867934,20.980267153553513,1391.7273455370223,0.3866751116796792,0.6534949186639206
+2,SVM,multi_band,all_bands,"{'C': 10.0, 'coef0': 0.5, 'degree': 3, 'gamma': 'scale', 'kernel': 'poly'}",0.6683005717927817,19.890965734273948,1304.1988921953443,0.35713303429612847,0.6814145706812187
