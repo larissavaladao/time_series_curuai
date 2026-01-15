@@ -1,0 +1,13 @@
+,Model,Group,Feature,Params,r2,mae,mse,mape,exp_var
+0,RF_6_8,multi_band,nir_red,"<bound method BaseEstimator.get_params of RandomForestRegressor(criterion='absolute_error', max_depth=5,
+                      max_features='sqrt', n_estimators=300)>",0.9029640390031698,14.225934205563414,491.8221634720842,0.32802394486677744,0.904250197592968
+1,RF_6_8,multi_band,nir_red_green,"<bound method BaseEstimator.get_params of RandomForestRegressor(criterion='absolute_error', max_depth=5,
+                      max_features='sqrt', n_estimators=300)>",0.8917712745447206,14.270274852009,548.5521589772326,0.3028356032011051,0.8938993520934716
+2,RF_6_8,multi_band,all_bands,"<bound method BaseEstimator.get_params of RandomForestRegressor(criterion='absolute_error', max_depth=5,
+                      max_features='sqrt', n_estimators=300)>",0.9181069828463335,12.69002275852585,415.0708712112253,0.28791548728144056,0.9193110201191688
+3,RF_7,multi_band,nir_red,"<bound method BaseEstimator.get_params of RandomForestRegressor(criterion='absolute_error', max_depth=5,
+                      max_features='sqrt')>",0.9005905900395469,14.367743477919221,503.8518769122153,0.3258114283777058,0.9015893831750414
+4,RF_7,multi_band,nir_red_green,"<bound method BaseEstimator.get_params of RandomForestRegressor(criterion='absolute_error', max_depth=5,
+                      max_features='sqrt')>",0.8914992278229011,14.198667863036308,549.9310148768006,0.29775234404921336,0.8937162919264053
+5,RF_7,multi_band,all_bands,"<bound method BaseEstimator.get_params of RandomForestRegressor(criterion='absolute_error', max_depth=5,
+                      max_features='sqrt')>",0.9208090280352468,12.54102626905548,401.37568339674,0.2918218110841457,0.9212762454364101

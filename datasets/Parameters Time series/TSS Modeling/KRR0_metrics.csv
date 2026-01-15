@@ -1,0 +1,4 @@
+,Model,Group,Feature,Params,r2,mae,mse,mape,exp_var
+0,KRR_0,multi_band,nir_red,"<bound method BaseEstimator.get_params of KernelRidge(alpha=0.001, degree=2, gamma=100.0, kernel='poly')>",0.7880707580726353,20.06984573623724,1074.1533056092487,0.4133265441447896,0.7880707580727079
+1,KRR_0,multi_band,nir_red_green,"<bound method BaseEstimator.get_params of KernelRidge(alpha=0.001, degree=2, gamma=100.0, kernel='poly')>",0.7924166820567594,19.918257311012106,1052.1261961314851,0.4205852576300768,0.7924166820572447
+2,KRR_0,multi_band,all_bands,"<bound method BaseEstimator.get_params of KernelRidge(alpha=0.001, degree=2, gamma=100.0, kernel='poly')>",0.8024694486979698,18.951772139517544,1001.1742254644291,0.39670199319845884,0.8024694486988744

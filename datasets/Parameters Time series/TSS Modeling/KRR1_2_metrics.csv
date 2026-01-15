@@ -1,0 +1,7 @@
+,Model,Group,Feature,Params,r2,mae,mse,mape,exp_var
+0,KRR_0,multi_band,nir_red,"<bound method BaseEstimator.get_params of KernelRidge(alpha=0.001, degree=2, gamma=100.0, kernel='poly')>",0.7880707580726353,20.06984573623724,1074.1533056092487,0.4133265441447896,0.7880707580727079
+1,KRR_0,multi_band,nir_red_green,"<bound method BaseEstimator.get_params of KernelRidge(alpha=0.001, degree=2, gamma=100.0, kernel='poly')>",0.7924166820567594,19.918257311012106,1052.1261961314851,0.4205852576300768,0.7924166820572447
+2,KRR_0,multi_band,all_bands,"<bound method BaseEstimator.get_params of KernelRidge(alpha=0.001, degree=2, gamma=100.0, kernel='poly')>",0.8024694486979698,18.951772139517544,1001.1742254644291,0.39670199319845884,0.8024694486988744
+3,KRR_1_2,multi_band,nir_red,"<bound method BaseEstimator.get_params of KernelRidge(alpha=1.5, degree=2, gamma=100.0, kernel='laplacian')>",0.8111856864482856,17.561459194770542,956.9963880559103,0.3493678229122373,0.8155742519001976
+4,KRR_1_2,multi_band,nir_red_green,"<bound method BaseEstimator.get_params of KernelRidge(alpha=1.5, degree=2, gamma=100.0, kernel='laplacian')>",0.8103549824689729,16.427373419405182,961.2067717540093,0.3078989825411599,0.8199018834514201
+5,KRR_1_2,multi_band,all_bands,"<bound method BaseEstimator.get_params of KernelRidge(alpha=1.5, degree=2, gamma=100.0, kernel='laplacian')>",0.7956205837935442,15.87960413817067,1035.8873722197097,0.2593858169449567,0.8124538156845992
