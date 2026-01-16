@@ -1,7 +1,0 @@
-,Model,Group,Feature,Params,r2,mae,mse,mape,exp_var,r2_std,mae_std,mse_std,mape_std,exp_var_std
-0,RF_6_8,multi_band,nir_red,"<bound method BaseEstimator.get_params of RandomForestRegressor(criterion='absolute_error', max_depth=5,
-                      max_features='sqrt', n_estimators=300)>",0.6746213352441768,21.550874851937188,1228.0532031475982,0.4613926733615141,0.6850978717723676,0.10837201952394068,4.583862458558116,544.2363860225403,0.07135704522018983,0.10674494062093261
-1,RF_6_8,multi_band,nir_red_green,"<bound method BaseEstimator.get_params of RandomForestRegressor(criterion='absolute_error', max_depth=5,
-                      max_features='sqrt', n_estimators=300)>",0.662133908433622,21.21411831434545,1278.4580193418067,0.44067141296123485,0.6741947664343397,0.1031754554227928,4.643665281445521,677.002677711694,0.06296716559055786,0.10233522353731073
-2,RF_6_8,multi_band,all_bands,"<bound method BaseEstimator.get_params of RandomForestRegressor(criterion='absolute_error', max_depth=5,
-                      max_features='sqrt', n_estimators=300)>",0.6890284838078954,20.131791492362176,1240.5708671800803,0.42721276128103086,0.6953388096964208,0.09249990514866027,4.640936430005987,615.9310855099488,0.06750517335416253,0.09461955182657421

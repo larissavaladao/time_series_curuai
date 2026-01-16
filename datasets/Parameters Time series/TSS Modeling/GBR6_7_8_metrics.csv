@@ -1,4 +1,0 @@
-,Model,Group,Feature,Params,r2,mae,mse,mape,exp_var
-0,GBR_6_7_8,multi_band,nir_red,"<bound method BaseEstimator.get_params of GradientBoostingRegressor(loss='absolute_error', max_depth=2)>",0.7980902075045863,16.95140761639457,1023.3702016362561,0.2865521552818099,0.8060370280064146
-1,GBR_6_7_8,multi_band,nir_red_green,"<bound method BaseEstimator.get_params of GradientBoostingRegressor(loss='absolute_error', max_depth=2)>",0.8006531481327822,16.177001795924514,1010.3800586865615,0.26516200527968914,0.8094250059805262
-2,GBR_6_7_8,multi_band,all_bands,"<bound method BaseEstimator.get_params of GradientBoostingRegressor(loss='absolute_error', max_depth=2)>",0.8129448125393689,14.706629661625128,948.0803409425617,0.23779149438256136,0.8214294395810267

@@ -1,7 +1,0 @@
-Model,Group,Feature,Params,r2,mae,mse,mape,exp_var
-GBR_GEE,multi_band,nir_red,"{'numberOfTrees': 300, 'shrinkage': None, 'samplingRate': 0.6, 'loss': 'LeastAbsoluteDeviation'}",0.6378030974900307,21.438929266365413,1270.0861617452185,0.5964755458462614,0.6491974893380823
-GBR_GEE,multi_band,nir_red_green,"{'numberOfTrees': 500, 'shrinkage': None, 'samplingRate': 0.6, 'loss': 'Huber'}",0.6770404435233134,20.23162394491738,1044.874752201531,0.5335628823248476,0.6856664559024372
-GBR_GEE,multi_band,all_bands,"{'numberOfTrees': 500, 'shrinkage': None, 'samplingRate': 0.6, 'loss': 'Huber'}",0.6853361543998209,19.66329236687996,1031.589738096658,0.5095015390376794,0.6952988550933796
-GBR_GEE,multi_band,location,"{'numberOfTrees': 500, 'shrinkage': None, 'samplingRate': 0.6, 'loss': 'Huber'}",0.6815951859449622,19.66608938594078,1042.7076876033489,0.5059607530205151,0.6922710951070734
-GBR_GEE,multi_band,period,"{'numberOfTrees': 500, 'shrinkage': None, 'samplingRate': 0.6, 'loss': 'Huber'}",0.6955176639028084,18.508681216632603,1005.2221454520499,0.42704362501160703,0.7052278222499099
-GBR_GEE,multi_band,period_location,"{'numberOfTrees': 500, 'shrinkage': None, 'samplingRate': 0.6, 'loss': 'Huber'}",0.6912123799526709,18.498700060465385,1016.1182892012177,0.42285927134556883,0.701308481415365
