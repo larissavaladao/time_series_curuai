@@ -2,7 +2,7 @@
 
 ## Overview
 
-This directory contains a comprehensive workflow for obtaining the mean values for the environmental parameters in each hydrological period of each year (except for lulc classes, which are annual). It also implements alysis and vizualization for environmental time series data from the Curuai watershed. The analysis integrates multiple data sources including water level periods, satellite imagery, and environmental parameters to produce publication-quality time series visualizations.
+This directory contains a comprehensive workflow for obtaining the mean values for the environmental parameters in each hydrological period of each year (except for lulc classes, which are annual). It also implements alysis and vizualization for environmental time series data from the Curuai watershed. The analysis includes multiple data sources including water level periods, satellite imagery, and environmental parameters to produce publication-quality time series visualizations.
 
 ## Execution Order
 
@@ -21,10 +21,10 @@ This directory contains a comprehensive workflow for obtaining the mean values f
 - **Tools**: Google Earth Engine for satellite data processing
 - **Note**: Requires Earth Engine authentication
 
-### 3. **3.area_spm_time_series.ipynb** - Calculate Area and Water Quality Metrics
-- **Purpose**: Extracts surface area and suspended particulate matter (SPM) time series from satellite imagery
+### 3. **3.area_tss_time_series.ipynb** - Calculate Area and Water Quality Metrics
+- **Purpose**: Extracts surface area and suspended particulate matter (TSS) time series from satellite imagery
 - **Input**: Landsat mosaics from step 2
-- **Output**: Area and SPM values aggregated by water period
+- **Output**: Area and TSS values aggregated by water period
 - **Metrics**: 
   - Open water surface area (km²)
   - Suspended particulate matter concentration
@@ -68,18 +68,12 @@ The following animated GIF files visualize the time series analysis results:
 
 | File | Description |
 |------|-------------|
-| **time_series.gif** | Animated time series showing all parameters (Area, TSS, Discharge, Wind, Precipitation) |
-| **time_series_txt.gif** | Annotated version with text labels and parameter values |
-| **TSS_time_series.gif** | Focused animation on Total Suspended Solids trends |
-| **TSS_time_series_txt.gif** | Annotated TSS time series with labeled values |
+| **time_series_txt.gif** | Animated time series showing Curuai image mosaics 
+| **TSS_time_series_txt.gif** | Focused animation on Total Suspended Solids trends |
 
 ### Output Directory Structure
 
 ```
-Area/
-├── LULC_time_series.jpg          # Land cover change plots
-├── Area_time_series.jpg          # Water surface area trends
-└── [other area-specific plots]
 
 Results/
 ├── lulc_data.csv                 # Consolidated land cover data
@@ -92,55 +86,13 @@ Results/
 
 ---
 
-## Data Requirements
-
-Before running this workflow, ensure you have:
-
-1. **Raw Data Files**
-   - Discharge and water level measurements
-   - Land use/land cover classification data
-   - Satellite imagery access (via Google Earth Engine)
-
-2. **Required Packages**
-   - `pandas`: Data manipulation
-   - `numpy`: Numerical computing
-   - `matplotlib`: Visualization
-   - `seaborn`: Statistical graphics
-   - `geemap`: Earth Engine Python interface
-   - `ee` (earthengine-api): Google Earth Engine access
-   - `scipy`: Signal processing
-
-3. **Authentication**
-   - Google Earth Engine account and authentication
-   - Appropriate permissions for data access
-
----
-
 ## Key Parameters by Period
 
-The analysis organizes all data by **water periods**, defined as:
-- **Flood Period**: High discharge, high water levels
-- **Drought Period**: Low discharge, low water levels
+The analysis organizes all data by **water periods**, defined in notebook 1.
 
 Time series metrics are calculated for each period:
-- **Area** (km²): Open water surface area
+- **Area** (km²): Flooded water surface area
 - **TSS** (mg/L): Total suspended solids concentration  
 - **Discharge** (m³/s): River discharge rate
 - **Wind** (m/s): Mean wind speed
 - **Precipitation** (mm): Accumulated rainfall per period
-
----
-
-## Usage Notes
-
-- **Sequential Execution**: Each notebook builds on previous outputs. Do not skip or reorder steps.
-- **Earth Engine**: Steps 2-3 require Google Earth Engine authentication via `geemap.ee_authenticate()`
-- **Memory Requirements**: Processing satellite imagery (step 2-3) may require adequate computational resources
-- **Output Storage**: Ensure sufficient disk space for satellite imagery and processed data
-- **Customization**: Update directory paths in each notebook if using a different data location
-
----
-
-## Contact & Documentation
-
-For detailed methodology and parameter definitions, refer to individual notebook documentation.
