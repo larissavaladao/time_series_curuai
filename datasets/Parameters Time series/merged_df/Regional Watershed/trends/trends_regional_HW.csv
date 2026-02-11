@@ -1,0 +1,5 @@
+"variable","P","trend","period"
+"area_km2",0.018,"linear","HW"
+"anthropogenic_km2",0.049,"linear","HW"
+"natural_km2",0,"linear","HW"
+"v_wind",0.034,"linear","HW"
