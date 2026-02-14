@@ -179,7 +179,7 @@ base_path <- "C:/Users/l_v_v/Documents/GitHub/time_series_curuai/datasets/Parame
 datasets <- list(
   list(
     # Input file for Local
-    path   = file.path(base_path, "Local Watershed/filled_local.csv"),
+    path   = file.path(base_path, "df_merged_local.csv"),
     # Output folder for Local
     outdir = file.path(base_path, "Local Watershed"),
     # Prefix for filenames (e.g. "local_plots_...")
@@ -187,7 +187,7 @@ datasets <- list(
   ),
   list(
     # Input file for Regional
-    path   = file.path(base_path, "Regional Watershed/filled_regional.csv"),
+    path   = file.path(base_path, "df_merged_regional.csv"),
     # Output folder for Regional
     outdir = file.path(base_path, "Regional Watershed"),
     # Prefix for filenames (e.g. "regional_plots_...")
