@@ -1,0 +1,6 @@
+"variable","P","trend","period"
+"area_km2",0.025,"linear","HW"
+"mean_discharge",0.024,"linear","HW"
+"natural_km2",0.031,"linear","HW"
+"u_wind",0.044,"linear","HW"
+"v_wind",0.001,"linear","HW"

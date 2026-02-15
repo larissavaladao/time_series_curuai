@@ -1,4 +1,4 @@
-# avaliar series temporais ####
+# analyse temporal series significance ####
 
 # libraries ######################
 library(funtimes)
@@ -6,6 +6,7 @@ library(dplyr)
 
 # 1. Define the Analysis Function ####
 ts_significance_analysis <- function(input_path, output_dir, label_suffix) {
+  set.seed(666) # For reproducibility of any random processes in the tests
   message(paste("Processing dataset:", label_suffix))
   
   # Ensure output directory exists
@@ -26,7 +27,7 @@ ts_significance_analysis <- function(input_path, output_dir, label_suffix) {
 
   # selecionar colunas 
   # Note: Ensure these column names match your CSV exactly
-  selecao <- select(dados, area_km2, area_km2_fill, TSS_mean_fill, TSS_mean, precipitation, mean_discharge, 
+  selecao <- select(dados, area_km2,  TSS_mean, precipitation, mean_discharge, 
                     anthropogenic_km2, natural_km2, u_wind, v_wind)
 
   # Initialize an empty list to store results
@@ -44,6 +45,7 @@ ts_significance_analysis <- function(input_path, output_dir, label_suffix) {
     # ---------------------------------------------------------
     # STEP 1: Test for Linear Trend (Student's t-test)
     # ---------------------------------------------------------
+    
     t_test_res <- notrend_test(x, test = "t")
     
     if (t_test_res$p.value <= 0.05) {
@@ -117,6 +119,16 @@ datasets <- list(
   list(
     path   = file.path(base_path, "df_merged_regional.csv"),
     outdir = file.path(base_path, "Regional Watershed/trends"),
+    suffix = "regional"
+  ),
+  list(
+    path   = file.path(base_path, "df_fillTSS_local.csv"),
+    outdir = file.path(base_path, "Local Watershed Fill/trends"),
+    suffix = "local"
+  ),
+  list(
+    path   = file.path(base_path, "df_fillTSS_regional.csv"),
+    outdir = file.path(base_path, "Regional Watershed Fill/trends"),
     suffix = "regional"
   )
 )

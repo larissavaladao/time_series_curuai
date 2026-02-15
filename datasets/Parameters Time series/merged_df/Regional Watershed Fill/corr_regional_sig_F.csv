@@ -1,0 +1,8 @@
+"","TSS_mean","area_km2","precipitation","mean_discharge","u_wind","v_wind","anthropogenic_km2"
+"TSS_mean","***","**","","***","","","*"
+"area_km2","***","***","","***","","**","***"
+"precipitation","","","***","","","",""
+"mean_discharge","***","***","","***","","",""
+"u_wind","**","","","*","***","",""
+"v_wind","","***","","","","***","**"
+"anthropogenic_km2","**","***","","*","**","***","***"

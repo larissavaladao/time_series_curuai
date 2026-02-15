@@ -162,8 +162,17 @@ analyze_periods_by_dataset <- function(input_path, output_dir, file_prefix) {
       write.csv(cor_result$p, file = corr_p_name)
       write.csv(cor_result$se, file = corr_se_name)
       write.csv(cor_result$ci, file = corr_ci_name)
-      # Close PDF (moved outside the loop to ensure it always closes)
-      dev.off()
+      # Generate Stars (Significance) manually since corr.test object doesn't have $stars
+      p_mat <- cor_result$p
+      stars_mat <- matrix("", nrow=nrow(p_mat), ncol=ncol(p_mat))
+      stars_mat[p_mat < 0.05] <- "*"
+      stars_mat[p_mat < 0.01] <- "**"
+      stars_mat[p_mat < 0.001] <- "***"
+      rownames(stars_mat) <- rownames(p_mat)
+      colnames(stars_mat) <- colnames(p_mat)
+      write.csv(stars_mat, file = corr_si_name)
+      
+      dev.off()# Close PDF
     } else {
       message(paste("    Not enough complete pairs for correlation matrix."))
     }
@@ -190,6 +199,22 @@ datasets <- list(
     path   = file.path(base_path, "df_merged_regional.csv"),
     # Output folder for Regional
     outdir = file.path(base_path, "Regional Watershed"),
+    # Prefix for filenames (e.g. "regional_plots_...")
+    prefix = "regional"
+  ),
+  list(
+    # Input file for Local
+    path   = file.path(base_path, "df_fillTSS_local.csv"),
+    # Output folder for Local
+    outdir = file.path(base_path, "Local Watershed Fill"),
+    # Prefix for filenames (e.g. "local_plots_...")
+    prefix = "local"
+  ),
+  list(
+    # Input file for Regional
+    path   = file.path(base_path, "df_fillTSS_regional.csv"),
+    # Output folder for Regional
+    outdir = file.path(base_path, "Regional Watershed Fill"),
     # Prefix for filenames (e.g. "regional_plots_...")
     prefix = "regional"
   )

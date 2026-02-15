@@ -6,6 +6,7 @@ library(dplyr)
 
 # 1. Define the Analysis Function ####
 ts_significance_analysis <- function(input_path, output_dir, label_suffix) {
+  set.seed(666) # For reproducibility of any random processes in the tests
   
   message(paste("\n========================================"))
   message(paste("Starting Trend Analysis for:", label_suffix))
@@ -156,7 +157,7 @@ base_path <- "C:/Users/l_v_v/Documents/GitHub/time_series_curuai/datasets/Parame
 datasets <- list(
   list(
     # Input file for Local
-    path   = file.path(base_path, "Local Watershed/filled_local.csv"),
+    path   = file.path(base_path, "df_merged_local.csv"),
     # Output folder for Local Trends
     outdir = file.path(base_path, "Local Watershed/trends"),
     # Suffix
@@ -164,7 +165,7 @@ datasets <- list(
   ),
   list(
     # Input file for Regional
-    path   = file.path(base_path, "Regional Watershed/filled_regional.csv"),
+    path   = file.path(base_path, "df_merged_regional.csv"),
     # Output folder for Regional Trends
     outdir = file.path(base_path, "Regional Watershed/trends"),
     # Suffix

@@ -183,6 +183,16 @@ datasets <- list(
     path   = file.path(base_path, "df_merged_regional.csv"),
     outdir = file.path(base_path, "Regional Watershed"),
     suffix = "regional"
+  ),
+  list(
+    path   = file.path(base_path, "df_fillTSS_local.csv"),
+    outdir = file.path(base_path, "Local Watershed Fill"),
+    suffix = "local"
+  ),
+  list(
+    path   = file.path(base_path, "df_fillTSS_regional.csv"),
+    outdir = file.path(base_path, "Regional Watershed Fill"),
+    suffix = "regional"
   )
 )
 
