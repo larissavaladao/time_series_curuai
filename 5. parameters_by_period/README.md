@@ -96,3 +96,7 @@ Time series metrics are calculated for each period:
 - **Discharge** (m³/s): River discharge rate
 - **Wind** (m/s): Mean wind speed
 - **Precipitation** (mm): Accumulated rainfall per period
+
+# Example Results
+![Mosaic Time Series](.\time_series_txt.gif)
+![TSS Model Time Series](.\TSS_time_series_txt.gif)
