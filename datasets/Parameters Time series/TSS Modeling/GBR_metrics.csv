@@ -1,7 +1,0 @@
-,Model,Group,Feature,Params,r2,mae,mse,mape,exp_var
-6,GBR,multi_band,nir_red,"{'learning_rate': 0.1, 'loss': 'absolute_error', 'max_depth': 2, 'n_estimators': 100, 'warm_start': True}",0.790200483,17.52560746,1063.358897,0.30231648,0.801026446
-7,GBR,multi_band,nir_red_green,"{'learning_rate': 0.1, 'loss': 'absolute_error', 'max_depth': 2, 'n_estimators': 100, 'warm_start': True}",0.776790948,16.44985748,1131.32449,0.274091707,0.789757232
-8,GBR,multi_band,all_bands,"{'learning_rate': 0.1, 'loss': 'absolute_error', 'max_depth': 2, 'n_estimators': 100, 'warm_start': True}",0.773895492,15.90038028,1145.999971,0.257992352,0.785993552
-9,GBR,multi_band,location,"{'learning_rate': 0.1, 'loss': 'absolute_error', 'max_depth': 2, 'n_estimators': 500, 'warm_start': True}",0.819698973,13.71577793,913.8471977,0.20794873,0.827250698
-10,GBR,multi_band,period,"{'learning_rate': 0.1, 'loss': 'absolute_error', 'max_depth': 5, 'n_estimators': 100, 'warm_start': True}",0.841229105,9.876136869,804.7227476,0.126305263,0.847366337
-11,GBR,multi_band,period_location,"{'learning_rate': 0.1, 'loss': 'absolute_error', 'max_depth': 2, 'n_estimators': 300, 'warm_start': True}",0.808144962,13.84355102,972.4081532,0.196784517,0.818016775

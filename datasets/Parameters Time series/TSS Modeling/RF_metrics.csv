@@ -1,7 +1,0 @@
-,Model,Group,Feature,Params,r2,mae,mse,mape,exp_var
-6,RF,multi_band,nir_red,"{'criterion': 'absolute_error', 'max_depth': 5, 'max_features': 'sqrt', 'n_estimators': 300, 'oob_score': False, 'warm_start': True}",0.902964039,14.22593421,491.8221635,0.328023945,0.904250198
-7,RF,multi_band,nir_red_green,"{'criterion': 'absolute_error', 'max_depth': 5, 'max_features': 'sqrt', 'n_estimators': 100, 'oob_score': False, 'warm_start': True}",0.891499228,14.19866786,549.9310149,0.297752344,0.893716292
-8,RF,multi_band,all_bands,"{'criterion': 'absolute_error', 'max_depth': 5, 'max_features': 'sqrt', 'n_estimators': 300, 'oob_score': False, 'warm_start': True}",0.918106983,12.69002276,415.0708712,0.287915487,0.91931102
-9,RF,multi_band,location,"{'criterion': 'absolute_error', 'max_depth': 5, 'max_features': 'sqrt', 'n_estimators': 300, 'oob_score': False, 'warm_start': True}",0.90565055,13.2338007,478.2057107,0.300586914,0.90712159
-10,RF,multi_band,period,"{'criterion': 'absolute_error', 'max_depth': 10, 'max_features': 'sqrt', 'n_estimators': 300, 'oob_score': False, 'warm_start': True}",0.958395776,7.757818438,210.8690342,0.143204833,0.958467841
-11,RF,multi_band,period_location,"{'criterion': 'squared_error', 'max_depth': 10, 'max_features': 'sqrt', 'n_estimators': 100, 'oob_score': False, 'warm_start': True}",0.956936985,7.768537512,218.2628459,0.144197178,0.956981006

@@ -1,7 +1,0 @@
-,Model,Group,Feature,Params,r2,mae,mse,mape,exp_var,r2_std,mae_std,mse_std,mape_std,exp_var_std
-6,GBR,multi_band,nir_red,"{'learning_rate': 0.1, 'loss': 'absolute_error', 'max_depth': 2, 'n_estimators': 100, 'warm_start': True}",0.639406848,21.71596262,1345.029363,0.401050515,0.667058948,0.118093228,4.829700895,603.7203204,0.046643334,0.114726897
-7,GBR,multi_band,nir_red_green,"{'learning_rate': 0.1, 'loss': 'absolute_error', 'max_depth': 2, 'n_estimators': 100, 'warm_start': True}",0.651852563,20.5217733,1307.778076,0.380724982,0.669521461,0.147635536,4.561880891,671.2286538,0.05448784,0.130381313
-8,GBR,multi_band,all_bands,"{'learning_rate': 0.1, 'loss': 'absolute_error', 'max_depth': 2, 'n_estimators': 100, 'warm_start': True}",0.646632937,20.55392167,1357.339464,0.381784113,0.680705984,0.109993424,4.947909563,655.9872335,0.069018722,0.12219762
-9,GBR,multi_band,location,"{'learning_rate': 0.1, 'loss': 'absolute_error', 'max_depth': 2, 'n_estimators': 500, 'warm_start': True}",0.636322852,20.60710533,1404.772764,0.391161015,0.658990667,,,,,
-10,GBR,multi_band,period,"{'learning_rate': 0.1, 'loss': 'absolute_error', 'max_depth': 5, 'n_estimators': 100, 'warm_start': True}",0.657233786,19.56111979,1352.042101,0.376326716,0.666931056,,,,,
-11,GBR,multi_band,period_location,"{'learning_rate': 0.1, 'loss': 'absolute_error', 'max_depth': 2, 'n_estimators': 300, 'warm_start': True}",0.649639293,19.91196632,1395.795362,0.360950512,0.667169044,,,,,

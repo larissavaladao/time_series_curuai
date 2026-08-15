@@ -1,7 +1,0 @@
-,Model,Group,Feature,Params,r2,mae,mse,mape,exp_var,r2_std,mae_std,mse_std,mape_std,exp_var_std
-0,KRR,multi_band,nir_red,"{'alpha': 0.001, 'degree': 2, 'gamma': 100.0, 'kernel': 'poly'}",0.697487189,20.37651102,1132.009309,0.424498244,0.705409859,0.111018418,4.414849677,554.5639613,0.070104167,0.11022072
-1,KRR,multi_band,nir_red_green,"{'alpha': 1.5, 'degree': 2, 'gamma': 100.0, 'kernel': 'laplacian'}",0.593070663,21.16817106,1651.496613,0.386443067,0.627115737,0.174461437,5.27004684,1131.640271,0.063686798,0.162315784
-2,KRR,multi_band,all_bands,"{'alpha': 1.5, 'degree': 2, 'gamma': 100.0, 'kernel': 'laplacian'}",0.534705268,21.73086773,1963.555737,0.355595493,0.59008582,0.17142824,6.293845755,1299.27608,0.059840561,0.154301835
-3,KRR,multi_band,location,"{'alpha': 1.5, 'degree': 2, 'gamma': 100.0, 'kernel': 'chi2'}",0.475500211,25.17929646,2096.25348,0.424765512,0.531030308,,,,,
-4,KRR,multi_band,period,"{'alpha': 0.001, 'degree': 2, 'gamma': 10.0, 'kernel': 'rbf'}",0.683790754,18.59688058,1147.156216,0.328001235,0.682470211,,,,,
-5,KRR,multi_band,period_location,"{'alpha': 0.1, 'degree': 2, 'gamma': 100.0, 'kernel': 'chi2'}",0.543371121,23.06131149,1681.661498,0.387995491,0.588930635,,,,,
