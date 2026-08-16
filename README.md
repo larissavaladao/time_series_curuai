@@ -16,7 +16,8 @@ Responsible for the correction of the water's specular reflection (sun-glint) ba
 Focused on data cleaning, structuring, and harmonization. It consists of merging data extracted from different satellites (e.g., Landsat 7 and Landsat 8), removing duplicate values based on temporal criteria, and multi-parameter regression analysis.
 
 ### 4. `4.TSS_modeling`
-Implementation, calibration, and selection of models to estimate Total Suspended Solids (TSS) or Suspended Particulate Matter (SPM). It evaluates empirical approaches and machine learning algorithms (Random Forest, Gradient Boosting Regressor, SVM etc), using cross-validation to select the most robust predictive model.
+Implementation, calibration, and selection of models to estimate Total Suspended Solids (TSS) or Suspended Particulate Matter (SPM). It evaluates empirical approaches and machine learning algorithms (Random Forest, Gradient Boosting Regressor, SVM etc), using cross-validation to select the most robust predictive model.  
+Results can be viewd at: https://ee-curuai.projects.earthengine.app/view/curuai-mosaic-viewer
 
 ### 5. `5.parameters_by_period`
 Temporal stratification of the analysis. It calculates the average metrics and environmental parameters (Area, TSS, Discharge, Wind, Precipitation, and Land Use Classes) grouped by specific hydrological periods of the region (Rising, High Water, Falling, and Low Water), in addition to generating corresponding satellite image mosaics.

@@ -4,6 +4,9 @@
 
 This directory contains a comprehensive workflow for obtaining the mean values for the environmental parameters in each hydrological period of each year (except for lulc classes, which are annual). It also implements alysis and vizualization for environmental time series data from the Curuai watershed. The analysis includes multiple data sources including water level periods, satellite imagery, and environmental parameters to produce publication-quality time series visualizations.
 
+![TSS MODELING](time_series_curuai\5. parameters_by_period\TSS_TS_txt_cb.gif)
+
+
 ## Execution Order
 
 **The notebooks must be executed in sequential order** as each one depends on outputs from previous steps. Follow this sequence:
