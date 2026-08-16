@@ -36,8 +36,8 @@ Temporal stratification of the analysis. It calculates the average metrics and e
 ### 6. `6.Stat_analysis_and_PCA`
 Core of hypothesis testing, correlations, and multivariate integrations. It executes Principal Component Analysis (PCA) and hierarchical temporal trend detection (Linear, Mann-Kendall, and WAVK), consolidating the results into publication-ready visualizations and heatmaps.
 
-![PCA Local](6.Stat_analysis_and_PCA/pca_local.jpg)
-![PCA Regional](6.Stat_analysis_and_PCA/pca_regional.jpg)
+![PCA Local](6.Stat_analysis/pca_local.jpg)
+![PCA Regional](6.Stat_analysis/pca_regional.jpg)
 
 ### `datasets` Directory
 Contains the analysis results, raw and input datasets necessary to feed the notebooks. Including graphical analysis, images, tables, field measurements and geospatial boundaries used to reproduce the project's analyses and figures.
