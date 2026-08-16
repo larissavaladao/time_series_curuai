@@ -21,10 +21,12 @@ Responsible for the correction of the water's specular reflection (sun-glint) ba
 ### 3. `3.manage_data`
 Focused on data cleaning, structuring, and harmonization. It consists of merging data extracted from different satellites (e.g., Landsat 7 and Landsat 8), removing duplicate values based on temporal criteria, and multi-parameter regression analysis.
 
-<p align="center">
-  <img src="3.manage_data/analysis_date.png" alt="Samples Distribution" width="48%">
-  <img src="3.manage_data/band_TSS.png" alt="Reflectance and TSS Relation" width="48%">
-</p>
+<table align="center" width="100%">
+  <tr>
+    <td width="50%"><img src="3.manage_data/analysis_date.png" alt="Samples Distribution" width="100%"></td>
+    <td width="50%"><img src="3.manage_data/band_TSS.png" alt="Reflectance and TSS Relation" width="100%"></td>
+  </tr>
+</table>
 
 ### 4. `4.TSS_modeling`
 Implementation, calibration, and selection of models to estimate Total Suspended Solids (TSS) or Suspended Particulate Matter (SPM). It evaluates empirical approaches and machine learning algorithms (Random Forest, Gradient Boosting Regressor, SVM etc), using cross-validation to select the most robust predictive model.  
@@ -44,10 +46,12 @@ Temporal stratification of the analysis. It calculates the average metrics and e
 ### 6. `6.Stat_analysis_and_PCA`
 Core of hypothesis testing, correlations, and multivariate integrations. It executes Principal Component Analysis (PCA) and hierarchical temporal trend detection (Linear, Mann-Kendall, and WAVK), consolidating the results into publication-ready visualizations and heatmaps.
 
-<p align="center">
-  <img src="6.Stat_analysis/pca_local.jpg" alt="PCA Local" width="48%">
-  <img src="6.Stat_analysis/pca_regional.jpg" alt="PCA Regional" width="48%">
-</p>
+<table align="center" width="100%">
+  <tr>
+    <td width="50%"><img src="6.Stat_analysis/pca_local.jpg" alt="PCA Local" width="100%"></td>
+    <td width="50%"><img src="6.Stat_analysis/pca_regional.jpg" alt="PCA Regional" width="100%"></td>
+  </tr>
+</table>
 
 ### `datasets` Directory
 Contains the analysis results, raw and input datasets necessary to feed the notebooks. Including graphical analysis, images, tables, field measurements and geospatial boundaries used to reproduce the project's analyses and figures.
