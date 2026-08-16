@@ -16,16 +16,25 @@ Responsible for the correction of the water's specular reflection (sun-glint) ba
 
 ### 3. `3.manage_data`
 Focused on data cleaning, structuring, and harmonization. It consists of merging data extracted from different satellites (e.g., Landsat 7 and Landsat 8), removing duplicate values based on temporal criteria, and multi-parameter regression analysis.
+![Samples Distribution](3.%20manage_data/analysis_date.png)
+![Reflectance and TSS Relation](3.%20manage_data/band_TSS.png)
 
 ### 4. `4.TSS_modeling`
 Implementation, calibration, and selection of models to estimate Total Suspended Solids (TSS) or Suspended Particulate Matter (SPM). It evaluates empirical approaches and machine learning algorithms (Random Forest, Gradient Boosting Regressor, SVM etc), using cross-validation to select the most robust predictive model.  
 Results can be viewd at: https://ee-curuai.projects.earthengine.app/view/curuai-mosaic-viewer
 
+![TSS Model Comparison](4.%20TSS_modeling/metrics_comparison.jpg)
+
 ### 5. `5.parameters_by_period`
 Temporal stratification of the analysis. It calculates the average metrics and environmental parameters (Area, TSS, Discharge, Wind, Precipitation, and Land Use Classes) grouped by specific hydrological periods of the region (Rising, High Water, Falling, and Low Water), in addition to generating corresponding satellite image mosaics.
 
+![Time Series Animation](5.%20parameters_by_period/TSS_TS_txt_cb.gif)
+
 ### 6. `6.Stat_analysis_and_PCA`
 Core of hypothesis testing, correlations, and multivariate integrations. It executes Principal Component Analysis (PCA) and hierarchical temporal trend detection (Linear, Mann-Kendall, and WAVK), consolidating the results into publication-ready visualizations and heatmaps.
+
+![Time Series Animation](6.%Stat_analysis_and_PCA/pca_local.jpg)
+![Time Series Animation](6.%Stat_analysis_and_PCA/pca_regional.jpg)
 
 ### `datasets` Directory
 Contains the analysis results, raw and input datasets necessary to feed the notebooks. Including graphical analysis, images, tables, field measurements and geospatial boundaries used to reproduce the project's analyses and figures.
