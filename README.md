@@ -2,6 +2,8 @@
 
 This repository contains the code and notebooks used to implement the analyses presented in the scientific article **"Hydrological connectivity controls four decades of suspended sediment dynamics in an Amazon floodplain"**.
 
+![Curuai Floodplain](time_series_curuai/5.parameters_by_period/time_series_txt.gif)
+
 The project is organized as a sequential pipeline. The directories are numbered in the exact order the steps should be executed to ensure the correct reproduction of the methodology and results of the article.
 
 ## Repository Structure (Pipeline)
