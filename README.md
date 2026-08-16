@@ -4,7 +4,9 @@
 
 This repository contains the code and notebooks used to implement the analyses presented in the scientific article **"Hydrological connectivity controls four decades of suspended sediment dynamics in an Amazon floodplain"**.
 
-![Time Series Animation](5.%20parameters_by_period/time_series_txt.gif)
+<p align="center">
+  <img src="5.%20parameters_by_period/time_series_txt.gif" alt="Time Series Animation" width="800">
+</p>
 
 The project is organized as a sequential pipeline. The directories are numbered in the exact order the steps should be executed to ensure the correct reproduction of the methodology and results of the article.
 
@@ -19,25 +21,33 @@ Responsible for the correction of the water's specular reflection (sun-glint) ba
 ### 3. `3.manage_data`
 Focused on data cleaning, structuring, and harmonization. It consists of merging data extracted from different satellites (e.g., Landsat 7 and Landsat 8), removing duplicate values based on temporal criteria, and multi-parameter regression analysis.
 
-![Samples Distribution](3.manage_data/analysis_date.png)
-![Reflectance and TSS Relation](3.manage_data/band_TSS.png)
+<p align="center">
+  <img src="3.manage_data/analysis_date.png" alt="Samples Distribution" width="48%">
+  <img src="3.manage_data/band_TSS.png" alt="Reflectance and TSS Relation" width="48%">
+</p>
 
 ### 4. `4.TSS_modeling`
 Implementation, calibration, and selection of models to estimate Total Suspended Solids (TSS) or Suspended Particulate Matter (SPM). It evaluates empirical approaches and machine learning algorithms (Random Forest, Gradient Boosting Regressor, SVM etc), using cross-validation to select the most robust predictive model.  
 Results can be viewed at: https://ee-curuai.projects.earthengine.app/view/curuai-mosaic-viewer
 
-![TSS Model Comparison](4.TSS_modeling/metrics_comparison.jpg)
+<p align="center">
+  <img src="4.TSS_modeling/metrics_comparison.jpg" alt="TSS Model Comparison" width="800">
+</p>
 
 ### 5. `5.parameters_by_period`
 Temporal stratification of the analysis. It calculates the average metrics and environmental parameters (Area, TSS, Discharge, Wind, Precipitation, and Land Use Classes) grouped by specific hydrological periods of the region (Rising, High Water, Falling, and Low Water), in addition to generating corresponding satellite image mosaics.
 
-![TSS Time Series Animation](5.%20parameters_by_period/TSS_TS_txt_cb.gif)
+<p align="center">
+  <img src="5.%20parameters_by_period/TSS_TS_txt_cb.gif" alt="TSS Time Series Animation" width="800">
+</p>
 
 ### 6. `6.Stat_analysis_and_PCA`
 Core of hypothesis testing, correlations, and multivariate integrations. It executes Principal Component Analysis (PCA) and hierarchical temporal trend detection (Linear, Mann-Kendall, and WAVK), consolidating the results into publication-ready visualizations and heatmaps.
 
-![PCA Local](6.Stat_analysis/pca_local.jpg)
-![PCA Regional](6.Stat_analysis/pca_regional.jpg)
+<p align="center">
+  <img src="6.Stat_analysis/pca_local.jpg" alt="PCA Local" width="48%">
+  <img src="6.Stat_analysis/pca_regional.jpg" alt="PCA Regional" width="48%">
+</p>
 
 ### `datasets` Directory
 Contains the analysis results, raw and input datasets necessary to feed the notebooks. Including graphical analysis, images, tables, field measurements and geospatial boundaries used to reproduce the project's analyses and figures.
